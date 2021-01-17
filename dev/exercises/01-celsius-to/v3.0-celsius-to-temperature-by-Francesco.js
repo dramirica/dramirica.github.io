@@ -1,7 +1,7 @@
 /* 
 FROM CELSIUS TO KELVIN / FAHRENHEIT / NEWTON 
 by MDN Data Software - Mirica Dragos-Neculai
-v 2.3
+v 3.0
 */
 
 //Update 17/01/2021 by Francesco Pignatale
