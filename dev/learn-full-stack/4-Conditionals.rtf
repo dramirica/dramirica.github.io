@@ -1,0 +1,210 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs28\lang16 Conditional Statements\par
+
+\pard\sa200\sl276\slmult1\b0 Nella vita, prendiamo decisioni basandoci sulle circostanze.\par
+Pensa a una decisione semplice come andare a dormire, se sono stanco vado a dormire, altrimenti guardo la tv.\par
+Queste decisioni se/altrimenti (in inglese if/else) possono essere inserite dentro al nostro codice grazie agli stati condizionali (conditional statements).\par
+Questi stati controllano se una condizione e vera o falsa, e in base alla risposta, prende due strade diverse, rendiamo cosi il nostro programma, abile a prendere decisioni logiche.\par
+
+\pard\sa200\sl276\slmult1\qc\b\par
+if statement\par
+
+\pard\sa200\sl276\slmult1\b0 Spesso facciamo azioni in base a delle condizioni come, se il tempo e bello vado fuori, se la sveglia suona la spegno, se sono stanco vado a dormire.\par
+Nella programmazione possiamo fare queste azioni grazie al \b if \b0 statement : \par
+
+\pard\sl276\slmult1\b if (true) \{\par
+\tab console.log(`print message`);\par
+\}\par
+\par
+
+\pard\sa200\sl276\slmult1\b0 Se la \b condizione\b0  tra le parentesi tonde dopo l'if e \b vera\b0  allora il codice tra le parentesi graffe viene eseguito, se invece e falso il programma continua saltandole.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b if ... else statement\par
+
+\pard\sa200\sl276\slmult1\b0 In molti casi abbiamo bisogno di blocchi di codice alternativi da far partire in caso la condizione dell'if sia falsa, una condizione di default.\par
+In questi casi si usa \b else \b0 cosi :\par
+
+\pard\sl276\slmult1\b if (false) \{\par
+\tab console.log(`condizione passata con successo`);\par
+\} else \{\par
+\tab console.log(`condizione non passata`);\par
+\}\par
+
+\pard\sa200\sl276\slmult1\b0\par
+Un else deve sempre essere preceduto da un if, insieme vengono quindi chiamati if...else, questi insieme ci permettono di automatizzare domande a doppia risposta.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Comparison Operators\par
+
+\pard\sa200\sl276\slmult1\b0 Quando scriviamo stati condizionali, abbiamo bisogno di diversi operatori per comparare valori diversi, questi operatori si chiamano operatori comparativi.\par
+Questi sono : \par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1\b < (minore di)\b0\par
+{\pntext\f1\'B7\tab}\b  > (maggiore di)\b0\par
+{\pntext\f1\'B7\tab}\b  <= (minore o uguale a),\b0\par
+{\pntext\f1\'B7\tab}\b  >= (maggiore o uguale a)\b0\par
+{\pntext\f1\'B7\tab}\b  === (identico a)\b0\par
+{\pntext\f1\'B7\tab}\b  !== (diverso da)\b0\par
+
+\pard\sa200\sl276\slmult1\par
+I comparatori servono a comparare il valore di sinistra con quello di destra, 10 < 12 risulta true (vero), il piu semplice modo per immaginare il funzionamento e ponendosi delle domande, 10 e minore di 12? si, allora risulta true, se fosse 10 > 12, 10 e maggiore di 12? no, allora risulta false.\par
+Oltre ai numeri possiamo comparare anche stringhe come 'lasagna' === 'pizza' risulta false.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Logical operators\par
+
+\pard\sa200\sl276\slmult1\b0 Lavorare con le condizioni significa usare i valori booleani, true o false. \par
+In JavaScript ci sono operatori apposta per i valori booleani, conosciuti come operatori logici, possiamo usare questi operatori per aggiungere una maggiore logica ai nostri programmi, essi sono :\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 && (anche / and)\par
+{\pntext\f1\'B7\tab}|| ( oppure / or)\par
+{\pntext\f1\'B7\tab}! (nega)\par
+
+\pard\sl276\slmult1\par
+
+\pard\sl276\slmult1\qc\b &&\b0\par
+
+\pard\sl276\slmult1\par
+
+\pard\sa200\sl276\slmult1 Quando usiamo && controlliamo che entrambe le condizioni siano vere :\par
+
+\pard\sl276\slmult1\b if(1===1 && 2===2) \{\par
+\tab console.log('uguali'); //visualizza uguali\par
+\} else \{\par
+\tab console.log('diversi');\par
+
+\pard\sa200\sl276\slmult1\}\par
+\b0 se una o entrambe le condizioni sono false, verra eseguito il codice dentro al else.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b ||\b0\par
+
+\pard\sa200\sl276\slmult1 Usando invece || controlliamo che almeno una delle due (o piu) condizioni sia vera, e se almeno una condizione e vera, viene eseguito il condice dentro a if, altrimenti se tutte le condizioni risultano false, viene eseguito il codice dentro a else.\par
+
+\pard\sl276\slmult1\b if(3===1 || 2===2) \{\par
+\tab console.log('uguali'); //visualizza uguali\par
+\} else \{\par
+\tab console.log('diversi');\par
+
+\pard\sa200\sl276\slmult1\}\par
+\par
+
+\pard\sa200\sl276\slmult1\qc !\par
+
+\pard\sa200\sl276\slmult1\b0 L\lang1040 'operatore ! inverte o nega i valori, se noi mettiamo !true risultera false e viceversa.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Non boolean , truly and falsy values\b0\par
+
+\pard\sa200\sl276\slmult1 Prendiamo in considerazione come i valori non booleani vengono valutati nelle condizioni, come stringhe e numeri, a volte vuoi soltanto controllare che una variabile esista e che abbia un valore, non necessariamente uno specifico.\par
+
+\pard\sl276\slmult1\b let variable = 'esisto';\par
+if(variable) \{\par
+\tab console.log(variable); //visualizza esisto\par
+\} else \{\par
+\tab  console.log('non esiste');\par
+\}\b0\par
+
+\pard\sa200\sl276\slmult1\b\lang16\par
+\b0 In questo caso parte il codice dentro l'if anche se il valore non e esplicitamente \b true\b0 , ma siccome la variabile esiste e ha un valore al suo interno, viene letto come true, se al posto di un valore avesse avuto 0, " ", ' ', null, undefined o NaN, allora il risultato sarebbe stato \b false\b0 . \par
+
+\pard\sl276\slmult1\b\lang1040 let variable = 0;\par
+if(variable) \{\par
+\tab console.log(variable); \par
+\} else \{\par
+\tab  console.log('non esiste'); //visualizza non esiste\par
+\}\par
+\par
+
+\pard\sa200\sl276\slmult1\qc Short-hand \par
+
+\pard\sa200\sl276\slmult1\b0 Unendo la nostra conoscenza e gli operatori logici, si possono prendere delle scorciatoie, cosi invece di usare if e else per azioni semplici, possiamo fare molto piu in fretta con || \par
+\b let name = username || 'Dra';\par
+\b0  nel caso la variabile username esista e abbia un valore, name prende il valore di username, invece se username non esiste o non ha un valore, name prende come valore 'Dra'.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Ternary Operator\par
+
+\pard\sa200\sl276\slmult1\b0 Nello spirito di utilizzare scorciatoie, possiamo utilizzare i 'ternary operators' per semplificare gli if...else,  in questo modo :\par
+\b isNight ? console.log('turn on') : console.log('turn off');\par
+\b0 Se isNight e true allora viene visualizzato 'turn on' se invece e false viene visualizzato 'turn off'.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Else If Statement\par
+
+\pard\sa200\sl276\slmult1\b0 Si possono aggiungere altre condizioni agli \b if...else \b0 grazie agli \b else if\b0 , essi servono a poter utilizzare infiniti \b if...else if....else ecc.\b0\par
+Gli \b else if \b0 devono sempre essere messi dopo il primo \b if\b0 , e sempre prima dell'ultimo \b else\b0 , ogni \b else if\b0  ha una condizione esattamente come un normale \b if\b0 .\par
+\par
+
+\pard\sl276\slmult1\b let stopLight = 'yellow';\par
+\par
+if (stopLight === 'red') \{\par
+\tab console.log('Stop!')\par
+\} else if (stopLight === 'yellow') \{\par
+\tab console.log('slow down');\par
+\} else if (stopLight === 'green') \{\par
+\tab console.log('Go!');\par
+\} else \{\par
+\tab console.log('caution unknown!');\par
+\}\par
+
+\pard\sa200\sl276\slmult1\b0\par
+Solo un'optione verra eseguita, partendo dall'alto verso il basso, la prima che risulta true, tutte le altre non verranno prese in considerazione anche se potrebbero essere true anche le altre, se nessuna condizione risulta vera verra eseguito l' else.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Switch\par
+
+\pard\sa200\sl276\slmult1\b0 Gli \b else if\b0  sono molto utili, ma esiste anche un altro modo per fare controlli multipli, se poi avessimo inoltre la necessita di controllare numerose variabili, per velocizzare il processo, possiamo usare \b switch\b0  in questo modo :\par
+\par
+
+\pard\sl276\slmult1\b let grocery = 'banana';\par
+\par
+switch (grocery) \{\par
+\tab case 'pomodoro' : \par
+\tab\tab console.log('pomodori');\par
+\tab\tab break;\par
+\tab case 'limone' :\par
+\tab\tab console.log('limoni');\par
+\tab\tab break;\par
+\tab case 'banana' :\par
+\tab\tab console.log('banane');\par
+\tab\tab break;\par
+\tab default:\par
+\tab\tab console.log('non esiste');\par
+\tab\tab break;\par
+\tab\}\par
+//visualizza banane\par
+\par
+
+\pard\sa200\sl276\slmult1 Switch\b0  inizializza le condizioni e nelle parentesi accanto va messa la variabile da controllare.\par
+Tra le \b\{ ... \}\b0  vanno inseriti i 'casi' che potrebbero accadere, quando la condizione del caso corrisponde al valore della variabile, viene eseguito il codice, attenzione inserisci \b break\b0  dopo ogni caso altrimenti il programma continuera a eseguire le altre condizioni ma senza controllo, quindi eseguendo tutti i casi sucessivi anche il default.\par
+Se nessun caso corrisponde verra eseguito il codice nel default.\par
+\b\par
+
+\pard\sl276\slmult1\tab\b0\par
+
+\pard\sa200\sl276\slmult1\par
+\par
+\par
+\par
+\b\par
+\b0\par
+\b\lang16\par
+\par
+\par
+\b0\par
+\par
+\par
+\par
+\b\par
+
+\pard\sa200\sl276\slmult1\qc\b0\par
+
+\pard\sa200\sl276\slmult1\par
+\par
+\par
+\fs22\par
+}
+ 

@@ -1,0 +1,303 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs32\lang16 Console\par
+
+\pard\sa200\sl276\slmult1\b0\fs28 La console e il pannello che mostra i messaggi di errore, uno strumento molto utile per i programmatori, difatti normalmente tutte le operazioni che fa il computer restano invisibili, nel caso volessimo vedere a ogni punto l\lang1040 'operazione che viene svolta, possiamo fare un "print" che visualizza un messaggio alla console quando una determinata cosa viene eseguita.\par
+In JavaScript il termine \b console\b0  fa riferimento a un \b oggetto\b0 , cioe una collezione di dati e azioni, che possiamo utilizzare nel nostro codice.\par
+Le \b Keywords\b0\~sono parole come \b console\b0 , preimpostate nel linguaggio di programmazione, usate in JavaScript per determinati comandi.\par
+Un azione o metodo che e preimpostato nell'oggetto \b console\b0  e \b .log()\b0  e si usa per scrivere testo sulla console, tutto cio che viene inserito tra le parentesi viene visualizzato, si usa : \b console.log(testo da far vedere a console);\par
+\b0 Importante e mettere il punto e virgola a fine di ogni comando.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Commenti\b0\par
+
+\pard\sa200\sl276\slmult1 La programmazione e altamente collaborativa e il nostro codice diventa facilmente illeggibile, anche da noi stessi dopo qualche ora, per questa ragione e molto utile lasciare delle note che ci ricordino o che spieghino  il significato delle varie sezioni di esso.\par
+Le note sono chiamate \b commenti\b0  e vengono ignorati totalmente dal computer, esistono solo per gli esseri umani.\par
+I commenti servono a spiegare cosa fa il codice, lasciare istruzioni o anche utili annotazioni, ci sono inoltre 2 dipi di commento, a linea singola o a multi linea.\par
+A linea singola : //commento\par
+A linea multipla : \par
+/* \par
+multi\par
+linea\par
+*/\par
+\par
+I commenti posso essere messi ovunque anche tra i vari comandi, siccome vengono totalmente ignorati dal computer quando esegue il codice.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Tipi di dati\par
+
+\pard\sa200\sl276\slmult1\b0 In JavaScript ci sono 7 tipi di dati:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1  \b Numeri\b0  : qualsiasi numero includendo anche quelli con i decimali\par
+{\pntext\f1\'B7\tab} \b Stringhe\b0  : Qualsiasi carattere usabile da tastiera racchiuso tra " "\par
+{\pntext\f1\'B7\tab}\b Booleani\b0  : Un tipo di dato che ha solo 2 possibili valori \b true\b0  e \b false\b0\par
+{\pntext\f1\'B7\tab}\b Null\b0  : Rappresenta l'assenza di un qualsiasi valore\par
+{\pntext\f1\'B7\tab}\b Undefined\b0  : simile a null, anche questo rappresenza l'assenza di un valore ma si usa in modo diverso\b\par
+{\pntext\f1\'B7\tab}Symbol\b0  : Una feature nuova di cui ancora non dobbiamo preoccuparci, sono semplicemente dei simboli utili in certe azioni\b\par
+{\pntext\f1\'B7\tab}Object\b0  : racchiude gruppi di dati relazionati fra di loro\b\par
+
+\pard\sa200\sl276\slmult1\par
+\b0 I primi 6 tipi di dati sono chiamati \b primitivi\b0 , e sono molto semplici, gli oggetti invece sono dei tipi molto piu complessi.\par
+Non sembrano molti 7 tipi di dati, ma appena vedrai quante cose si possono fare con questi 7, si aprira un mondo di possibilita.\par
+Man mano che imparerai di piu sugli oggetti diventerai sempre piu abile a creare complesse collezioni di dati, ma prima di tutto mettiamoci a nostro agio con stringhe e numeri.\par
+-\b  console.log("Ci ao"); \tab\b0 visualizza la scritta "Ci ao", questa e una stringa\par
+- \b console.log(55.34);\tab\b0 visualizza il numero 55.34, questo non richiede " "\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Operazioni aritmetiche\par
+
+\pard\sa200\sl276\slmult1\b0 Un "operatore" e un carattere che fa un azione nel nostro codice, JavaScript infatti ha integrato un set di caratteri aritmetici, per eseguire operazioni fra numeri come :\tab\b +\tab -\tab *\tab /\tab %\par
+\b0 I primi 4 operatori si usano come imparato a scuola e si possono usare cosi :  \b console.log(4+4) \b0 che visualizza \b 8\par
+\b0 Tutte le operazioni dentro alle parentesi del log vengono eseguite e in seguito viene mostrato il risultato a console.\par
+L'ultimo operatore il \b %\b0  restituisce il resto delle divisioni es: 8%3 restituisce 2 cioe in 8 il 3 ci sta 2 volte con un resto di 2 derivato da 8-3*2=2.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Concatenazione Stringhe\par
+
+\pard\sa200\sl276\slmult1\b0 Gli operatori non sono solo per i numeri ma anche per le stringhe, quando usiamo un + tra due stringhe quella di destra si appende a quella di sinistra cosi \b console.log('hi ' + 'ya'); \b0 visualizza \b hi ya\par
+\b0 Questo processo di unire delle stringhe insieme si chiama \b concatenazione\b0 .\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Proprieta\par
+
+\pard\sa200\sl276\slmult1\b0 Quando introduci un dato in JavaScript, il browser lo salva come un istanza.\par
+Ogni istanza di tipo 'string' ha una proprieta chiamata \b length,\b0  utile perche contiene il numero di caratteri presenti nella stringa.\par
+Per prendere le informazioni dalle stringhe, bisogna aggiungere una proprieta come \b length\b0  dopo il nome della stringa es. \b console.log('Hello'.length);\b0  \par
+console.log quindi visualizzera la lunghezza (length) della stringa ('Hello') a console cioe 5\par
+Attenzione il nome della stringa e la proprieta che vuoi usare devono sempre essere uniti da un punto 'Hello'\b .\b0 length.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b methods\par
+
+\pard\sa200\sl276\slmult1\b0 I metodi sono azioni che possiamo fare, JavaScript ci da la possibilita di utilizzarne diversi per le stringhe.\par
+Possiamo chiamare e usare questi metodi aggiungendo alle stringhe un punto, il nome del metodo e le parentesi tonde alla fine es. \b 'stringa'.metodo();\par
+\b0 Esattamente come si fa con \b console.log()\b0 , infatti in questo modo chiamiamo il metodo \b log\b0  dall'oggetto console.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b .toUpperCase()\par
+
+\pard\sa200\sl276\slmult1\b0 Questo metodo restituisce le stringhe in maiuscolo es. console.log('hello'\b .toUpperCase()\b0 ); restituisce HELLO\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b .startsWith()\par
+
+\pard\sa200\sl276\slmult1\b0 Serve a controllare con che lettera inizia una stringa es. console.log('hello'.\b startsWith('h')\b0 ); restituisce true\par
+All'interno delle parentesi di \b startsWith() \b0 inseriamo la lettera da comparare, in questo caso \b h\b0  viene comparata con la prima lettera della stringa \b hello\b0  e siccome sono la stessa lettera, viene restituito il valore true (vero), se fossero state diverse il valore restituito sarebbe stato false (falso).\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b .trim()\par
+
+\pard\sa200\sl276\slmult1\b0 Viene utilizzato per togliere gli spazzi sia all'inizio di una stringa sia alla fine es. console.log('      hello     ciao    '\b .trim()\b0 ); restituisce "\b hello     ciao"\b0 .\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Objects\par
+
+\pard\sa200\sl276\slmult1\b0 Oltre all'oggetto \b console\b0 , ci sono altri \b oggetti\b0  preimpostati in JavaScript, molto utili e pieni di funzionalita.\par
+Per fare calcoli complessi di matematica si utilizza l'oggetto \b Math\b0 .\par
+Ogni oggetto ha i suoi metodi, che si possono usare per le funzionalita piu svariate.\par
+
+\pard\sa200\sl276\slmult1\qc\par
+\b Math.random()\b0\par
+
+\pard\sa200\sl276\slmult1 Un metodo dell'oggetto Math e \b .random()\b0  es. console.log(\b Math.random()\b0 );\par
+Usato cosi, il metodo random dell'oggetto math, senza alcun indicazione tra le parentesi, restituisce a caso 0 o 1, come il lancio di una moneta.\par
+Per generare invece un numero random tra 50 e 0 si puo scrivere cosi: \b Math.random() * 50;\par
+\par
+
+\pard\sa200\sl276\slmult1\qc .floor()\b0\par
+
+\pard\sa200\sl276\slmult1 I numeri generati, pero, saranno spesso numeri decimali, quindi per approssimare si usa un altro metodo di Math chiamato \b .floor() \b0 che approssima al numero piu vicino es. \b Math.floor(Math.random() * 50);\b0\par
+Quindi math.random generera un numero tra 0 e 1 (0.3665) che poi verra moltiplicato per 50 (18,325) e infine verra approssimato al numero piu vicino (18).\par
+Un altro es. \b console.log(Math.floor(Math.random()*100));\par
+\par
+
+\pard\sa200\sl276\slmult1\qc .ceil()\b0\par
+
+\pard\sa200\sl276\slmult1 Per approssimare invece al numero piu piccolo si usa al posto di .floor > \b .ceil().\par
+\par
+
+\pard\sa200\sl276\slmult1\qc Number.isInteger()\par
+
+\pard\sa200\sl276\slmult1\b0 console.log(\b Number.isInteger(5)\b0 ); questo metodo dell'oggetto \b Number\b0  restituisce true o false, true e il numero e intero e false se ha decimali.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Variabili\par
+
+\pard\sa200\sl276\slmult1\b0 In JavaScript una variabile e un contenitore per un valore, come delle piccole scatole che vivono nella memoria del computer con dentro delle informazioni.\par
+In genere informazioni come username, account id, password, auguri di compleanno ecc.\par
+Inoltre grazie alle variabili possiamo etichettare con un nome descrittivo, i valori, in modo che altri programmatori o anche noi, possiamo riconoscerle facilmente.\par
+In breve le variabili danno un etichetta e contengono dati nella memoria.\par
+Possiamo fare 3 cose con queste variabili :\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1 Creare una variabile e dargli un nome descrittivo\par
+{\pntext\f0 2.\tab}Salvarci dentro dati e aggiornarli\par
+{\pntext\f0 3.\tab}Prendere informazioni salvate nelle variabili per usarle\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard\sa200\sl276\slmult1\qc\b Variabile var\par
+
+\pard\sa200\sl276\slmult1\b0 Sono state introdotti molti cambiamenti in ES6 JavaScript del 2015.\par
+Uno dei piu grandi cambiamenti e stato l'aggiunta delle parole chiave \b let \b0 e \b  const\b0 , per creare/dichiarare variabili.\par
+Prima dell'avvento di ES6 si usava solo \b var\b0 .\par
+
+\pard\sl240\slmult1\b var mioNome = 'Drago';\par
+console.log(mioNome);\par
+\par
+
+\pard\sa200\sl276\slmult1\b0 Cosa abbiamo appena fatto nelle 2 righe qua sopra?\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1 Per prima cosa abbiamo scritto \b var\b0 , una parola chiave che consente la creazione o dichiarazione di una variabile\par
+{\pntext\f0 2.\tab}Poi abbiamo dato un nome a questa variabile \b mioNome\b0 , qualsiasi nome diamo a una variabile deve iniziare per forza con la lettera minuscola (mai con numeri), se il nome e composto da 2 o piu parole si mette la prima parola in minuscolo e continuando senza spazzi si mette la seconda e successivamente la terza con la prima lettera maiuscola, questo metodo si chiama Camel Casing un esempio ciaoMiChiamoDrago\par
+{\pntext\f0 3.\tab}In seguito abbiamo messo un uguale, in questo modo iniziamo un assegnamento, cio che verra dopo questo uguale sara il valore che verra salvato dentro la variabile.\par
+{\pntext\f0 4.\tab}'Drago' il valore della nostra variabile, possiamo anche dire che la variabile 'mioNome' e stata inizializzata con il valore 'Dragos'\par
+{\pntext\f0 5.\tab}Una volta fatta una dichiarazione completa, grazie a console.log possiamo far visualizzare a console, il valore della variabile, semplicemente scrivendo il nome della variabile.\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard\sa200\sl276\slmult1\qc\b Variabile let\par
+
+\pard\sa200\sl276\slmult1\b0 Come menzionato la variabile let e stata introdotta recentemente con ES6, questa variabile serve a specificare che qualsiasi valore mettiamo dentro a let puo cambiare sempre senza alcun problema. \par
+
+\pard\sl240\slmult1\b\par
+let meal = 'pizza';\par
+console.log(meal); //visualizza pizza\par
+\par
+meal = 'lasagna';\par
+console.log(meal); //visualizza lasagna\par
+\par
+\b0\par
+
+\pard\sa200\sl276\slmult1 In questo modo siamo riusciti a cambiare valore alla variabile da pizza a lasagna.\par
+Un altra cosa interessante su \b let\b0  e che si puo dichiarare una variabile senza necessariamente assegnarli un valore, in questo caso let prendera automaticamente il valore \b undefined\b0 .\par
+\par
+
+\pard\sl240\slmult1\b let meal;\par
+console.log(meal); //visualizza undefined\par
+\par
+meal = 'lasagna';\par
+
+\pard\sa200\sl276\slmult1 console.log(meal); //visualizza lasagna\par
+\par
+
+\pard\sa200\sl276\slmult1\qc Variabile const\par
+
+\pard\sa200\sl276\slmult1\b0 Un altra introduzione di ES6 e la variabile \b const\b0  che e un diminutivo di costante, questa variabile si assegna esattamente come le altre 2, solo che questa non puo essere riassegnata altrimenti appare un TypeError, e deve per forza avere un valore altrimenti appare un SyntaxError.\par
+\b const mioNome = 'dra';\par
+\par
+
+\pard\sa200\sl276\slmult1\qc Math operators and variables\par
+
+\pard\sa200\sl276\slmult1\b0 Possiamo usare le operazioni matematiche per calcolare nuovi valori e assegnarli alle variabili.\par
+
+\pard\sl276\slmult1\par
+\b let w = 4;\par
+w = w +2;\par
+console.log(w); // visualizza 6\par
+\par
+
+\pard\sa200\sl276\slmult1\b0 Nell'esempio qua sopra dichiariamo una variabile w con valore 4, poi riassegnamo alla variabile w il valore w + 2 cioe 6, un altro modo per fare la stessa cosa \b w+=2 \b0 invece che \b w = w+2\b0 , si possono usare anche * / -  e non solo il +.\par
+\b\par
+
+\pard\sa200\sl276\slmult1\qc Increment and Decrement operators\par
+
+\pard\sa200\sl276\slmult1\b0 Per incrementare e decrementare una variabile di 1 in modo veloce si usa \b ++ \b0 e \b --\b0\par
+\par
+
+\pard\sl276\slmult1\b let a = 10;\par
+a++; //11\par
+a--; //10\par
+\par
+
+\pard\sa200\sl276\slmult1\qc Concatenazione di String con Variabili\par
+
+\pard\sa200\sl276\slmult1\b0 Il + puo essere usato per unire 2 stringhe o piu, anche se queste sono salvate in delle variabili.\par
+
+\pard\sl276\slmult1\b let io = 'uomo';\par
+
+\pard\sa200\sl276\slmult1 console.log('Io sono ' + io + ' oggi'); // io sono uomo oggi\par
+\par
+
+\pard\sa200\sl276\slmult1\qc String Interpolation\par
+
+\pard\sa200\sl276\slmult1\b0 Nella versione ES6 di JavaScript possiamo interpolare variabili con stringhe usando i caratteri \b `` \b0 e\b  $\{variabile\}\b0 .\par
+\b const mioNome = 'dra';\par
+console.log(`Mi chiamo $\{mioNome\}`); //visualizza Mi chiamo dra\b0\par
+Ma perche e utile? Innanzi tutto per la leggibilita del codice, infatti in questo modo la lettura sara molto piu fluida e poi perche sara molto piu facile e veloce scrivere codice in questo modo piuttosto che usare il + e le ""\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b typeof operator\par
+
+\pard\sa200\sl276\slmult1\b0 Durante la scrittura del codice e la creazione di molte variabili, puo capitare di dimenticarsi, che tipo di variabile abbiamo creato, e che contenuto essa abbia, possiamo controllare il tipo della nostra variabile usando \b typeof\b0 .\par
+Questo operatore controlla il valore della variabile e ne visualizza il tipo.\par
+
+\pard\sl276\slmult1\b const var1 = 'aa';\par
+
+\pard\sa200\sl276\slmult1 console.log(typeof var1); // visualizza string\par
+
+\pard\sl276\slmult1 const var2 = 10;\par
+
+\pard\sa200\sl276\slmult1 console.log(typeof var2); // visualizza number\par
+
+\pard\sl276\slmult1 const var3 = false;\par
+
+\pard\sa200\sl276\slmult1 console.log(typeof var3); // visualizza boolean\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard\sl276\slmult1\par
+
+\pard\sa200\sl276\slmult1\qc\b0\par
+
+\pard\sa200\sl276\slmult1\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\par
+
+\pard\sa200\sl276\slmult1\par
+\b\par
+\b0\par
+\par
+ \par
+\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b\par
+
+\pard\sa200\sl276\slmult1\b0\par
+\b\par
+\par
+\par
+\par
+\par
+\fs22\lang16\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 

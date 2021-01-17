@@ -1,0 +1,298 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs28\lang16 Functions\par
+
+\pard\sa200\sl276\slmult1\b0 Quando per la prima volta hai imparato come calcolare l'area di un rettangolo, hai dovuto seguire dei passi per arrivare al risultato finale, partendo dal misurare la lunghezza, poi l'altezza e in fine moltiplicare le due misure tra di loro per trovare il risultato.\par
+Nel tempo, con la pratica, non hai piu dovuto seguire esattamente i passaggi per trovare l'area, ma ti e bastato sapere le misure e calcolare in fretta a mente il risultato.\par
+Possiamo fare la stessa cosa anche nella programmazione, prendiamo d'esempio il calcolo dell'area del rettangolo.\par
+
+\pard\sl276\slmult1\b const width = 10;\par
+const height = 6;\par
+const area =  width * height;\par
+console.log(area); // visualizza: 60\par
+\par
+
+\pard\sa200\sl276\slmult1\b0 Immagina ora di dover calcolare l'area di 10 rettangoli, diventerebbe un lavoro troppo lungo e estremamente ripetitivo, siccome spesso nella programmazione accade che determinate azioni si debbano ripetere molte volte, invece di dover riscrivere ripetitivamente le stesse linee di codice possiamo usare le funzioni, esse sono blocchi di codice atti a svolgere una sola determinata azione, in modo da poter richiamare la funzione quando ne abbiamo bisogno senza dover riscrivere tutto il codice che contiene.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Function Declarations\par
+
+\pard\sa200\sl276\slmult1\b0 In JavaScript ci sono molti modi di creare una funzione, uno di questi e tramite la \b dichiarazione\b0  della stessa, simile alla dichiarazione delle variabili, es. \b function nomeFunzione() \{ codice \};\par
+\b0 Dichiarare una funzione consiste in : \par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\b function\b0  come per le variabili let/var e const anche le funzioni hanno la loro parola chiave\par
+{\pntext\f0 2.\tab}Il nome della funzione in questo caso \b nomeFunzione\b0\par
+{\pntext\f0 3.\tab}\b\{ codice \};\b0  il corpo della funzione, piu precisamente cio che viene eseguito una volta cha la richiamiamo\par
+
+\pard\sa200\sl276\slmult1 Un altro priccolo particolare per le funzioni in JavaScript, consiste nel poter richiamare la funzione ancora prima che essa venga dichiarata, ovviamente non funziona se la funzione in questione non esiste.\par
+
+\pard\sl276\slmult1\b console.log(\ul\i greetWorld()\ulnone\i0 ); //Richiamando la funzione esce Hello, World!\par
+//dichiarazione greetWorld\par
+function \ul\i greetWorld()\ulnone\i0  \{\par
+  console.log('Hello, World!');\par
+\}\par
+\b0\par
+
+\pard\sa200\sl276\slmult1 In questo caso richiamiamo la funzione \b greetWorld()\b0  ancora prima che essa venga dichiarata, comunque non e una pratica consigliata.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Richiamare una funzione\b0\par
+
+\pard\sa200\sl276\slmult1 Dichiarare una funzione e diverso dal richiamarla, infatti quando dichiariamo una funzione essa prende 'vita' ma non viene eseguita, invece solo quando la richiamiamo il codice al suo interno viene eseguito.\par
+Per richiamare una funzione, bisogna scrivere il nome della funzione seguita da parentesi tonde () e punto e virgola; \b nomeFunzione();\par
+\b0 Una volta che la funzione viene richiamata, il codice tra le parentesi graffe \{\} viene eseguito, ricorda che le funzioni possono essere richiamate tutte le volte che desideri.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Parametri e argomenti\par
+
+\pard\sa200\sl276\slmult1\b0 Fino ad ora tutte le funzioni che abbiamo creato, sono state in grado di fare il loro lavoro senza richiedere dati supplementari. \par
+Tuttavia vi sono funzioni a cui possiamo dare input da usare durante la loro esecuzione, per svolgere determinate azioni.\par
+Dichiarando una funzione, possiamo specificarne anche i \b parametri\b0 , questi permettono alle funzioni di accettare input esterni da poter usare al loro interno.\par
+Usiamo questi parametri come \b placeholder\b0 , cioe solo per il nome, perche poi, il vero valore lo diamo noi quando richiamiamo la funzione. \par
+Per dichiarare un parametro e usarlo : \par
+\b function nomeF(parametro,parametro2) \{\par
+\tab console.log(parametro * \lang1040 parametro2);\b0\lang16\par
+\}\par
+In questo caso usiamo i qualsiasi valori che arriveranno, per moltiplicarli fra di loro e restituire il risultato a console.\par
+Quando richiamiamo una funzione che ha dei parametri, dobbiamo passare dei valori tra le parentesi (argomenti), in questo modo :\par
+\b nomeF(argomento, argomento2);\par
+\b0 Da notare, l'ordine nel quale passiamo gli argomenti, deve essere lo stesso ordine dei parametri, altrimenti passeremo valori sballati.\par
+Una volta creata una funzione, possiamo richiamarla tutte le volte che vogliamo, e passarele valori diversi ogni volta, per ottenere risultati diversi, questa e solo una piccola parte della potenza delle funzioni.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Default Parameters\par
+
+\pard\sa200\sl276\slmult1\b0 Una delle novita introdotte da ES6 e l'abilita di introdurre parametri di default,  essi permettono ai parametri delle funzioni di avere dei valori di 'emergenza', nel caso non vengano passati al richiamo della funzione o nel caso siano \b undefined\b0 .\par
+
+\pard\sl276\slmult1\b function ciao(\i name = 'Dragos'\i0 )\{\par
+\tab console.log(`Ciao $\{name\}!`)\par
+\}\par
+\par
+ciao(); //visualizza Ciao Dragos!\par
+
+\pard\sa200\sl276\slmult1 ciao('Jonny'); //visualizza Ciao Jonny!\b0\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Return\par
+
+\pard\sa200\sl276\slmult1\b0 Quando richiamiamo una funzione, il computer la esegue e alla fine restituisce un valore, il valore di default che viene restituito e \b undefined\b0 .\par
+
+\pard\sl276\slmult1\b function areaRettangolo(altezza, lunghezza) \{\par
+\tab let area = altezza * lunghezza;\par
+\}\par
+console.log(areaRettangolo(5,3)); //visualizza undefined\par
+\par
+
+\pard\sa200\sl276\slmult1\b0 Nella funzione areaRettangolo, grazie all'altezza e alla larghezza riusciamo a trovare l'area, ma quando richiamiamo la funzione dentro a un console.log, viene visualizzato \b undefined\b0 , la funzione e bagliata? \par
+No, la funzione e giusta, infatti il computer calcola l'area, ma non la restituisce, per restituire il risultato dobbiamo usare \b return\b0  in questo modo : \par
+
+\pard\sl276\slmult1\b function areaRettangolo(altezza, lunghezza) \{\par
+\tab let area = altezza * lunghezza;\par
+\tab\ul\i return area;\i0\par
+\ulnone\}\par
+
+\pard\sa200\sl276\slmult1 console.log(areaRettangolo(5,3)); //visualizza 15\b0\par
+Return si usa per restituire un risultato dalla funzione, il risultato che viene restituito e il valore subito dopo return, se non e specificato un return il valore restituito e undefined.\par
+Quando viene usato un return in una funzione, la funzione viene eseguita fino a quando non trova un return, una volta trovato la funzione si ferma e tutto il codice che segue non viene eseguito.\par
+
+\pard\sl276\slmult1\b function rectangleArea(width, height) \{\par
+  if (width < 0 || height < 0) \{\par
+    return 'You need positive integers to calculate area!';\par
+  \}\par
+  return width * height;\par
+
+\pard\sa200\sl276\slmult1\}\par
+\b0 In questo caso se l'altezza o la larghezza e minore di 0 viene restituito un messaggio di errore, altrimenti viene restituito il risultato.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Helper Functions\b0\par
+
+\pard\sa200\sl276\slmult1 Possiamo utilizzare il valore di return di una funzione all\rquote interno di un\rquote altra funzione, la funzione che andiamo a utilizzare in un altra funzione viene chiamata helper function, questo metodo aiuta a rendere il nostro codice piu semplice da leggere, sapendo che ogni funzione richiamata fa una determinata azione e nel caso ci sia un errore, diventa molto piu semplice da identificare.\par
+\par
+
+\pard\sl276\slmult1\b function multiplyByNineFifths(number) \{\par
+  return number * (9/5);\par
+\}\par
+function getFahrenheit(celsius) \{\par
+  return multiplyByNineFifths(celsius) + 32;\par
+\}\par
+getFahrenheit(15); // ritorna \b0 59\par
+
+\pard\sa200\sl276\slmult1\par
+Nell\rquote esempio abbiamo :\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 La funzione getFahrenheit richiamata con il valore 15\par
+{\pntext\f1\'B7\tab}Il codice all\rquote interno di getFahrenheit richiama la funzione multiplyByNineFifths passando celsius(15) come argomento\par
+{\pntext\f1\'B7\tab}multiplyByNineFifths prende il valore 15 passato nel parametro number e lo moltiplica per 9/5 che restituisce 27\par
+{\pntext\f1\'B7\tab}Il valore 27 viene restituito alla funzione getFahrenheit che continua la sua esecuzione aggiungendo 32 a 27 e restituendo 59 come risultato\par
+{\pntext\f1\'B7\tab}In fine il valore 59 ritorna come risultato finale\par
+
+\pard\sa200\sl276\slmult1 Possiamo usare le funzioni per sezionare il codice in piccole sezioni con minori compiti da svolgere, in modo da poter usare solo una determinata funzione quando ne abbiamo bisogno e non richiamare un blocco di codice immenso ogni singola volta, in questo modo anche i compiti piu complessi possono essere suddivisi in compiti molto piu semplici che uniti insieme portano allo stesso risultato.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Function Expressions\par
+
+\pard\sa200\sl276\slmult1\b0 Un altro modo per definire una funzione e usando una \b function expression\b0 , tramite la parola chiave \b function\b0 , di solito in queste funzioni il nome della funzione viene omesso, una funzione senza nome si chiama \b funzione anonima\b0 , queste funzioni spesso sono salvate dentro a una variabile per poterci facilmente riferire a loro e usarle es.\par
+\b\par
+
+\pard\sl276\slmult1 const calculateArea = function(width, height) \{\par
+\tab const area = width * height;\par
+\tab return area;\par
+
+\pard\sa200\sl276\slmult1\}\par
+\par
+\b0 Nell'esempio abbiamo \lang1040 :\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 La dichiarazione della variabile \b calculateArea\b0 , denominata in modo che il nome della variabile rappresenti cosa fa la funzione\lang16\par
+{\pntext\f1\'B7\tab}\lang1040 Sucessivamente l'assegnazione di una funzione anonima, con la stessa struttura di una funzione normale ma senza nome, alla variabile dichiarata \lang16\par
+
+\pard\sa200\sl276\slmult1\par
+\lang1040 In fine per richiamare la funzione basta scrivere il nome della variabile con i vari argomenti nel caso ne abbia :\par
+\b calculateArea(5,10);\par
+\b0 L'unico accorgimento da tenere a mente e che a differenza delle funzioni normali, quelle salvate in una variabile, non possono essere richiamate prima di essere definite.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Arrow Functions\b0\par
+
+\pard\sa200\sl276\slmult1 L' ES6 ha introdotto le \b arrow function syntax\b0  (sintassi di funzioni a freccia), un modo piu rapido per scrivere funzioni usando l'operatore speciale \b () =>\b0 , senza avere piu la necessita di scrivere \b function\b0  ogni volta, in questo modo metti le parentesi () con i parametri e aggiungi dopo => che punta verso le parentesi graffe con il codice \{\} in questo modo :\par
+
+\pard\sl276\slmult1\b const rectangleArea = (width, height) => \{\par
+\tab let area = width*height;\par
+\tab return area;\par
+
+\pard\sa200\sl276\slmult1\};\par
+\b0 E molto importante padroneggiare e essere a conoscenza dei vari modi in cui e possibile scrivere una funzione, perche molto spesso capitera di imbatterci in ogniuno di essi.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Concise Body Arrow Functions\par
+
+\pard\sa200\sl276\slmult1\b0 JavaScript inoltre da la possibilita di riformulare in modi diferiti le funzioni arrow, il modo piu conciso e chiamato \b concise body\b0 .\par
+Le funzioni che hanno un solo parametro, non necessitano che il parametro sia racchiuso tra le parentesi, ma se i parametri sono 0 o piu di 1 allora le parentesi sono obbligatorie.\par
+Le funzioni che sono composte da una sola riga di codice non necessitano le parentesi graffe, e il valore che ne risulta verra automaticamente restituito come return in questo modo :\par
+\b const sumNumbers = number => number+number;\b0\par
+Un altro esempio :\par
+\b const plantNeedsWater = day => day === 'Wednesday' ? true : false;\b0\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Scope\par
+
+\pard\sa200\sl276\slmult1\b0 Lo scope si riferisce ai valori a cui possiamo accedere da determinati punti del codice o del programma, in qualsiasi programma volessimo creare, dobbiamo sapere quando possiamo accedere alle variabili e quando no, per evitare cosi errori nel codice.\par
+Mentre alcune variabili possono essere usate in tutto il programma, altre non possono essere usate al di fuori del contesto in cui si trovano.\par
+
+\pard\sl276\slmult1 Puoi pensare allo scope come il cielo di notte visto dalla tua finestra, \par
+
+\pard\sl240\slmult1 tutti quelli che vivono sul pianeta terra le possono vedere le stelle, quindi lo scope delle stelle e \b globale \b0 perche le loro variabili sono accessibili in tutto il programma, invece se vivi in citta magari oltre alle stelle hai anche un grattacielo che riesci a vedere, quel grattacelo e accessibile solo dalla tua citta, e non tutte le persone del mondo possono vederlo quindi la sua variabile non e accessibile in tutto il programma.\par
+\par
+
+\pard\sl240\slmult1\qc\b Blocks and Scope\par
+\par
+
+\pard\sl240\slmult1\b0 I block rappresentano il codice che troviamo tra le parentesi graffe \{\}, come negli if e nelle funzioni, aiutandoci a raggruppare comandi e dare un ordine al nostro codice. \par
+\par
+\b const city = 'New York City';\par
+\par
+function logCitySkyline () \{\par
+  let skyscraper = 'Empire State Building';\par
+  return 'The stars over the ' + skyscraper + ' in ' + city;\par
+\}\par
+\par
+console.log(logCitySkyline());//restituisce The stars over the Empire State Building in New York City\par
+\par
+\b0 Nell'esempio possiamo vedere che la variabile city e accessibile dal blocco della funzione logCitySkyline ed e accessibile anche la variabile skyscraper che si trova all'interno del blocco.\par
+\par
+\par
+
+\pard\sl240\slmult1\qc\b Global Scope\par
+\par
+
+\pard\sl240\slmult1\b0 Nel global scope, le variabili sono dichiarate al di fuori dei block, e siccome non sono richiuse, sono accessibili in ogni parte del programma anche dentro ai vari block.\par
+
+\pard\sa200\sl240\slmult1\par
+
+\pard\sl240\slmult1\b const color = 'blue';\par
+const sky = () => \{\par
+\tab return color;\par
+\}\par
+console.log(sky()); //visualizza blue\par
+
+\pard\sa200\sl240\slmult1\b0\par
+
+\pard\sl240\slmult1\qc\b Block Scope\par
+\par
+
+\pard\sl240\slmult1\b0 Nel block scope, le variabili sono dichiarate dentro ai blocchi, e sono accessibili solo dentro alle \{ \}. Le variabili dichiarate come block scope sono conosciute anche come variabili locali, perche sono accessibili solo al codice che e parte del loro stesso blocco.\par
+\par
+\b const sky = () => \{\par
+\tab let color = "blue";\par
+\tab console.log(color);//viualizza blue\par
+\}\par
+\par
+sky(); // visualizza blue\par
+console.log(color); //visualizza errore\par
+\par
+
+\pard\sl240\slmult1\qc Scope Pollution\par
+
+\pard\sl240\slmult1\b0 Sembra utile tenere tutte le variabili accessibili, ma avere troppe variabili globali puo causare problemi.\par
+\par
+Quando dichiari una nuova variabile globale, essa si salva nel \b global namespace\b0 , esso permette alle variabili di essere accessibili ovunque, oltre a farle rimanere in memoria anche dopo la fine del programma, riempiendo cosi lo spazio di global namespace molto in fretta. \par
+\par
+Lo scope pollution appare quando si hanno troppe variabili nel global namespace o quando riutilizziamo spesso variabili con diversi scope, rendendo cosi difficile tenere traccia delle variabili dichiarate e rendere piu facile l'apparizione di errori.\par
+\par
+Un esempio :\par
+\par
+\b let num = 50;\par
+\par
+const logNum = () => \{\par
+\tab num=100;\par
+\tab console.log(num);\par
+\}\par
+\par
+logNum(); //visualizza 100\par
+console.log(num);//visualizza 100\par
+\par
+\b0 Vediamo nell'esempio : \par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 l'assegnazione a num il valore 50\par
+{\pntext\f1\'B7\tab}dentro a logNum riassegnamo a num il valore 100\par
+{\pntext\f1\'B7\tab}richiamiamo num sia dentro al block e sia fuori dal block\par
+{\pntext\f1\'B7\tab}i valori restituiti sono 100 sia dentro che fuori, questo perche una volta modificato il valore dentro al block di una variabile globale, non ritorna piu come prima neanche fuori dal block\par
+
+\pard\sl240\slmult1\par
+\par
+
+\pard\sl240\slmult1\qc\b Practice good scoping\par
+\par
+
+\pard\sl240\slmult1\b0 Dichiarare le variabili nei blocchi o come globali al momento giusto e il modo migliore per perfezionare il nostro codice perche :\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Rende il codice molto piu leggibile organizzando il condice in piccoli blocchi\par
+{\pntext\f1\'B7\tab}Rende piu facile la comprensione delle variabili siccome chiarifica quale variabile e collegata a quale blocco, senza dover verificare noi linea dopo linea\par
+{\pntext\f1\'B7\tab}Rende il codice piu facile da aggiornare e perfezzionare\par
+{\pntext\f1\'B7\tab}Salva memoria e rende il programma molto piu veloce\par
+
+\pard\sl240\slmult1\par
+Il \b block scope\b0  e una potente arma in JavaScript, siccome ci permette di definire le variabili con precisione, la regola generale consiste in : se la variabile non ha bisogno di esistere fuori da un blocco allora non dovrebbe farlo.\par
+\par
+\par
+
+\pard\sa200\sl276\slmult1\par
+\par
+\lang16\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+   \fs22\par
+}
+ 

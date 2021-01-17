@@ -1,0 +1,376 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Consolas;}{\f2\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red179\green204\blue255;\red0\green0\blue0;\red255\green255\blue255;\red147\green149\blue152;\red131\green255\blue245;\red255\green137\blue115;\red255\green224\blue131;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs28\lang16 JavaScript Objects\par
+
+\pard\sa200\sl276\slmult1\b0 Gli \b oggetti\b0  (objects) sono la struttura principale di JavaScript, essi permettono di sviluppare e programmare quasi qualsiasi aspetto di js.\par
+Probabilmente sei gia a tuo agio con gli oggetti piu di quanto tu possa credere, siccome js ama gli oggetti, quasi tutti i componenti che hai usato, sotto sotto sono oggetti, e nel caso non lo siano, nel caso di stringhe e numeri, si comportano come tali.\par
+Ci sono solo 7 tipi di dati in js, 6 dei quali sono tipi primitivi come stringhe, numeri, boolean, undefined, e symbol, come 7imo tipo abbiamo l\rquote oggetto, che ci ha permesso di allargare il codice e dare possibilita di creare parti molto piu complesse.\par
+Possiamo usare gli oggetti in js per creare e modellare oggetti dal mondo reale, come una palla, oppure usarli per creare strutture di dati per il web.\par
+Come principale obiettivo, gli oggetti, servono come contenitori per dati e funzionalita correlate fra loro.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Creating Object Literals\par
+
+\pard\sa200\sl276\slmult1\b0 Gli oggetti possono essere assegnati alle variabili esattamente come gli altri tipi di dati, usiamo inoltre le parentesi \{\'85\} per creare l\rquote oggetto cosi :\par
+\b let nave = \{\}; //la nave e un oggetto vuoto\par
+\b0 Gli oggetti sono organizzati in dati non ordinati ma correlati tramite la relazione key-value, una key funziona come il nome delle variabili e si riferisce a un punto specifico in memoria che contiene il valore della key.\par
+Il valore della key puo essere ogni tipo di dato esistente in js anche funzioni e oggetti, creamo una relazione key-value scrivendo il nome della key seguito da due punti : e in seguito il valore.\par
+Separiamo ogni relazione key-value con la virgola, le key sono delle stringhe ma se non abbiamo nomi per le key complessi o non abbiamo caratteri speciali al suo interno possiamo omettere le \ldblquote  \rdblquote  un esempio :\par
+
+\pard\sl240\slmult1\b let nave = \{\par
+\tab\lquote livello combustibile\rquote : \lquote alto\rquote ,\par
+\tab colore: \lquote grigio\rquote\par
+\};\par
+\par
+\b0 In questo caso abbiamo un oggetto \b nave\b0  che possiede 2 proprieta, \lquote\b livello conbustibile\rquote\b0  e \b colore\b0 .\par
+\par
+
+\pard\sl240\slmult1\qc\b\par
+Accessing Properties\par
+\par
+
+\pard\sl240\slmult1\b0 Ci sono due modi per accedere alle proprieta degli oggetti, uno di questi e tramite il punto, come abbiamo visto anche con \b length\b0 , \lquote ciao\rquote .length, nello stesso modo accediamo anche agli oggetti e le loro proprieta, rapportandoci all\rquote oggetto \b nave\b0  di prima vogliamo accedere al colore, procediamo quindi cosi : nave.colore restituisce grigio.\par
+\par
+Se cerchiamo di accedere a una proprieta che non esiste, ci viene restituito \b undefined\b0 .\par
+\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b Bracket Notation\par
+
+\pard\sa200\sl276\slmult1\b0 Il secondo modo per accedere alle proprieta degli oggetti e tramite le parentesi [  ], bisogna passare il nome della proprieta come stringa per accedervi, cosi :\par
+\b nave[\lquote colore\rquote ];\par
+\b0 Dobbiamo utilizzare le parentesi quadre quando dobbiamo accedere alle proprieta che contengono nel nome numeri, spazzi o caratteri speciali, altrimenti viene restituito un messaggio di errore.\par
+Inoltre possiamo passare una variabile dentro le quadre, questo e molto utile quando trattiamo con le funzioni es.\par
+
+\pard\sl276\slmult1\b let ritorna = (oggetto, proprieta) => oggetto[proprieta];\par
+
+\pard\sa200\sl276\slmult1 ritorna(nave,\rquote colore\rquote ); // visualizza grigio\par
+\par
+
+\pard\sa200\sl276\slmult1\qc Property Assignment\par
+
+\pard\sa200\sl276\slmult1\b0 Una volta definito un oggetto, non siamo bloccati con le proprieta scritte, infatti gli oggetti sono modificabili.\par
+Possiamo sia aggiungere una relazione key-value sia modificarne una gia esistente\par
+\b nave[\lquote livello combustibile\rquote ] = \lquote basso\rquote ;\par
+nave.colore = \lquote rosso\rquote ;\par
+\b0 Due cose possono succedere quando assegnamo un nuovo valore alla proprieta :\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent360{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Se la proprieta esiste gia, gli viene assegnato il nuovo valore\par
+{\pntext\f2\'B7\tab}Se la proprieta non esiste, viene creata con il valore stabilito\par
+
+\pard\sa200\sl276\slmult1 Le stesse cose le possiamo fare sia se l\rquote oggetto e dichiarato in una variabile const che in una variabile let, l\rquote unica differenza e che se l\rquote oggetto e dentro una variabile const, non possiamo riassegnare l\rquote intero oggetto ma solo cambiare o aggiungere dati a quelli gia esistenti.\par
+Per cancellare una proprieta utilizziamo \b delete\b0  :\par
+\b delete nave.colore; // cancella la proprieta colore\par
+\par
+
+\pard\sa200\sl276\slmult1\qc Methods\par
+
+\pard\sa200\sl276\slmult1\b0 Quando il dato dentro all\rquote oggetto e una funzione, possiamo chiamarla metodo, in grande una proprieta e cio che l\rquote oggetto ha, un metodo e cio che l\rquote oggetto fa.\par
+Per esempio l\rquote oggetto globale console, ha il metodo .log(), come per l\rquote oggetto Math c\rquote e il metodo .floor().\par
+Possiamo inserire metodi negli oggetti esattamente come facciamo anche per le variabili, la key serve come nome per il metodo e la funzione come suo valore cosi\par
+
+\pard\sl276\slmult1\b const naveAliena = \{\par
+\tab invasione: function () \{\par
+\tab\tab console.log(\lquote Hello, invasion started!\rquote );\par
+\tab\},\par
+\tab colore: \lquote grigio\rquote\par
+\};\par
+\par
+
+\pard\sa200\sl276\slmult1\b0 Con le nuove introduzioni di ES6, possiamo dichiarare la funzione senza scrivere \b function \b0 e i due punti, cosi:\par
+
+\pard\sl276\slmult1\b invasione ()\{\par
+\tab\tab console.log(\lquote Hello, invasion started!\rquote );\par
+
+\pard\sa200\sl276\slmult1\}\par
+\par
+\b0 I metodi degli oggetti si richiamano scrivendo il nome dell\rquote oggetto, punto e il nome dell metodo con le parentesi finali : \b naveAliena.invasione();\par
+
+\pard\sa200\sl276\slmult1\qc Nested Objects\par
+
+\pard\sa200\sl276\slmult1\b0 Nel codice delle applicazioni, gli oggetti sono spesso messi dentro a altri oggetti con le loro proprieta e con i loro metodi, che a loro volta possono avere array interi altri oggetti al loro interno ecc.\par
+Nel seguente esempio abbiamo diversi oggetti come \b computer\b0  che si trova dentro all\rquote oggetto \b nanoelectronics\b0  che a sua volta fa parte dell\rquote oggetto \b spaceship\b0\par
+\par
+Possiamo inoltre accedere alle proprieta degli oggetti dentro a altri oggetti partendo dal piu alto fino alla proprieta necessaria es.\par
+\b spaceship.nanoelectronics.computer.terabytes; // restituisce 100\par
+
+\pard\sl276\slmult1\cf1\highlight2\b0\f1\fs21 const spaceship\cf3  =\~\{\cf4\line\cf3\~\~\~\~\~\cf5 telescope\cf3 : \{\cf4\line\cf3\~\~\~\~\~\~\~\~\cf5 yearBuilt\cf3 : \cf6 2018\cf3 ,\cf4\line\cf3\~\~\~\~\~\~\~\~\cf5 model\cf3 : \cf7 '91031-XLT'\cf3 ,\cf4\line\cf3\~\~\~\~\~\~\~\~\cf5 focalLength\cf3 : \cf6 2032\cf3  \cf4\line\cf3\~\~\~\~\~\},\cf4\line\cf3\~\~\~\~\cf5 crew\cf3 : \{\cf4\line\cf3\~\~\~\~\~\~\~\~\cf5 captain\cf3 : \{\~\cf4\line\cf3\~\~\~\~\~\~\~\~\~\~\~\~\cf5 name\cf3 : \cf7 'Sandra'\cf3 , \cf4\line\cf3\~\~\~\~\~\~\~\~\~\~\~\~\cf5 degree\cf3 : \cf7 'Computer Engineering'\cf3 , \cf4\line\cf3\~\~\~\~\~\~\~\~\~\~\~\~\cf6 encourageTeam\cf3 () \{\~\cf6 console\cf3 .\cf5 log\cf3 (\cf7 'We got this!'\cf3 ) \}\~\cf4\line\cf3\~\~\~\~\~\~\~\~\~\}\cf4\line\cf3\~\~\~\~\},\cf4\line\cf3\~\~\~\~\cf5 engine\cf3 : \{\cf4\line\cf3\~\~\~\~\~\~\~\~\cf5 model\cf3 : \cf7 'Nimbus2000'\cf4\line\cf3\~\~\~\~\~\},\cf4\line\cf3\~\~\~\~\~\cf5 nanoelectronics\cf3 : \{\cf4\line\cf3\~\~\~\~\~\~\~\~\~\cf5 computer\cf3 : \{\cf4\line\cf3\~\~\~\~\~\~\~\~\~\~\~\~\cf5 terabytes\cf3 : \cf6 100\cf3 ,\cf4\line\cf3\~\~\~\~\~\~\~\~\~\~\~\~\cf5 monitors\cf3 : \cf7 'HD'\cf4\line\cf3\~\~\~\~\~\~\~\~\~\},\cf4\line\cf3\~\~\~\~\~\~\~\~\cf7 'back-up'\cf3 : \{\cf4\line\cf3\~\~\~\~\~\~\~\~\~\~\~\cf5 battery\cf3 : \cf7 'Lithium'\cf3 ,\cf4\line\cf3\~\~\~\~\~\~\~\~\~\~\~\cf5 terabytes\cf3 : \cf6 50\cf4\line\cf3\~\~\~\~\~\~\~\~\~\}\cf4\line\cf3\~\~\~\~\}\cf4\line\cf3\};\par
+\cf0\highlight0\b\f0\fs26\lang1040\par
+
+\pard\sa200\sl276\slmult1\qc Pass By Reference\par
+
+\pard\sa200\sl276\slmult1\b0 Gli oggetti possono essere passati come refence, questo significa che possiamo passare nelle funzioni, come argomento, le variabili che contentono oggetti, gli oggetti mutati dentro alle funzioni mutano anche fuori dalla funzione es.\par
+
+\pard\sl240\slmult1 const spaceship = \{\par
+  homePlanet : 'Earth',\par
+  color : 'silver'\par
+\};\par
+ \par
+let paintIt = obj => \{\par
+  obj.color = 'glorious gold'\par
+\};\par
+ \par
+paintIt(spaceship);\par
+ \par
+spaceship.color // Restituisce 'glorious gold'\par
+\par
+La funzione \b paintIt() \b0 cambia il colore della \b spaceship\b0  anche fuori dalla essa, nel caso pero riassegnasse l'intero oggetto non funzionerebbe.\par
+\par
+
+\pard\sl240\slmult1\qc\b Looping Through Objects\par
+\par
+
+\pard\sl240\slmult1\b0 Per gli array abbiamo il for, per gli oggetti abbiamo \b for...in\b0 , esso permette di eseguire il blocco di codice per ogni proprieta nell'oggetto.\par
+\par
+\b for (let membro in nave.equipaggio) \{\par
+  console.log(`$\{membro\}: $\{nave.equipaggio[membro].nome\}`);\par
+\}\par
+\par
+\b0 In questo for...in passiamo per ogni proprieta della proprieta equipaggio dell'oggetto nave, a ogni loop la variabile \b membro\b0  contiene una key di nave.equipaggio (solo il suo nome non anche il suo contenuto), permettendoci di accedere a agni persona dell'equipaggio in parte e poter visualizzare il loro nome.\par
+\par
+
+\pard\sl240\slmult1\qc\b Advanced Objects Introduction The this Keyword\par
+\par
+
+\pard\sl240\slmult1\b0 Prendiamo ad esempio il seguente oggetto : \par
+\par
+\b const goat = \{\par
+  dietType: 'herbivore',\par
+  makeSound() \{\par
+    console.log('baaa');\par
+  \}\par
+\};\par
+\par
+\b0 Nell'oggetto abbiamo il metodo .\b makeSound();\b0  che se richiamato ritorna la stringa 'baaa' senza alcun errore, proviamo ad aggiungere ora un metodo \b diet\b0  che per funzionare ha bisogno di accedere alla proprieta \b dietType \b0 :\par
+\par
+\b const goat = \{\par
+  dietType: 'herbivore',\par
+  makeSound() \{\par
+    console.log('baaa');\par
+  \},\par
+  diet() \{\par
+    console.log(dietType);\par
+  \}\par
+\};\par
+goat.diet(); // restituisce ReferenceError\par
+\par
+\b0 Ma perche? Non sono nello stesso oggetto? Non dovrei poter accedere a dietType? No, perche siccome siamo dentro alla funzione \b diet()\{...\}\b0 , non abbiamo accesso a tutto quello che vi e fuori dalla funzione, ed ecco dove appare \b this\b0 , se infatti invece che \b console.log(dietType); \b0 aggiungiamo this cosi : \b console.log(this.dietType);\b0  funziona!\par
+\par
+La keyword \b this\b0  si riferisce all'oggetto corrente richiamandolo, permettendoci quindi di utilizzare le sue proprieta, nell'esempio qua sopra, con \b this\b0  ci riferiamo all'oggetto \b goat\b0 .\par
+\par
+Non usare mai le arrow function negli oggetti se devi usare this al loro interno, le arrow function hanno gia un oggetto this a qui si riferiscono.\par
+\par
+
+\pard\sl240\slmult1\qc\b Privacy\par
+\par
+
+\pard\sl240\slmult1\b0 Accedere e aggiornare proprieta e fondamentale quando si usano gli oggetti.\par
+Ma ci sono casi nei quali non vogliamo che altro codice riesca ad accedere e modificare le proprieta del nostro oggetto, quando si parla di privacy negli oggetti, ci si riferisce all'idea che solo alcune proprieta debbano poter essere mutate e altre no.\par
+\par
+In JavaScript tra i programmatori si segue come convenzione, il fatto di mettere davanti alle variabili non modificabili un trattino basso _ es \b _nome\b0 , la variabile \b _nome \b0 suggerisce agli altri programmatori che il suo valore non dovrebbe essere mai alterato.\par
+\par
+
+\pard\sl240\slmult1\qc\b Getters\par
+
+\pard\sl240\slmult1\par
+\b0 I getter sono metodi che fanno il return delle proprieta di un oggetto, ma possono fare anche di piu.\par
+\par
+\b const person = \{\par
+  _firstName: 'John',\par
+  _lastName: 'Doe',\par
+  get fullName() \{\par
+    if (this._firstName && this._lastName)\{\par
+      return `$\{this._firstName\} $\{this._lastName\}`;\par
+    \} else \{\par
+      return 'Missing a first name or a last name.';\par
+    \}\par
+  \}\par
+\}\par
+ \par
+// To call the getter method: \par
+person.fullName; // 'John Doe'\par
+\b0\par
+Il metodo getter nell'esempio e formato da :\par
+\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 La parola \b get\b0  seguita dalla funzione\par
+{\pntext\f2\'B7\tab}Usiamo un if...else per controllare che _firstName e _lastName non siano vuoti\par
+{\pntext\f2\'B7\tab}Accediamo alle proprieta usando this.\par
+{\pntext\f2\'B7\tab}Nell'ultima riga richiamiamo il metodo get senza parentesi\par
+
+\pard\sl240\slmult1\par
+Ma quali sono i vantaggi di usare i metodi get e non le funzioni normali?\line\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Possono fare azioni con i dati quando prendono una proprieta\par
+{\pntext\f2\'B7\tab}Fanno il return di valori differenti usando le condizioni\par
+{\pntext\f2\'B7\tab}Nei getter accediamo le proprieta usando this\par
+{\pntext\f2\'B7\tab}La funzionalita del nostro codice diventa piu facile da capire per altri programmatori\par
+
+\pard\sl240\slmult1\par
+
+\pard\sl240\slmult1\qc\b Setters\par
+\par
+
+\pard\sl240\slmult1\b0 Insieme ai metodi getter, possiamo creare anche metodi setter che reassignano un valore alle proprieta gia esistenti in un oggetto.\par
+\par
+\b const person = \{\par
+  _age: 37,\par
+  set age(newAge)\{\par
+    if (typeof newAge === 'number')\{\par
+      this._age = newAge;\par
+    \} else \{\par
+      console.log('You must assign a number to age');\par
+    \}\par
+  \}\par
+\};\par
+\par
+\b0 Osserivamo nell'esempio che viene fatto un controllo al valore che vogliamo assegnare a \b _age\b0 , in questo caso solo se il valore e number viene modificata la proprieta _age, infine vengono restituite risposte diverse se il valore e number o no.\par
+\par
+Per riassegnare un valore con il setter scriviamo :\par
+\par
+\b console.log(person._age); //restituisce 37\b0\par
+\b person.age = 40; //viene cambiato il valore di age a 40\par
+console.log(person._age); //restituisce 40\par
+\par
+
+\pard\sl240\slmult1\qc Factory Functions\par
+\par
+
+\pard\sl240\slmult1\b0 Fino a ora, abbiamo creato singoli oggetti, ma a volte abbiamo bisogno  di creare molte istanze di un oggetto rapidamente.\par
+\par
+Una factory function restituisce un oggetto e puo essere usata quante volte vogliamo, inoltre puo avere parametri che ci permettono di alterare ogni oggetto che viene creato.\par
+\par
+Mettiamo il caso di voler creare mostri, non possono venire tutti uguali, ogniuno deve avere la sua forma, possiamo crearli individualmente, uno per uno, ma si preferisce usare una factory function, per rendere tutto piu semplice, cosi :\par
+\par
+\b const creatoreMostri = (nome, eta, frase) => \{\par
+\tab return \{\par
+\tab\tab nome: nome, \par
+\tab\tab eta: eta,\par
+\tab\tab spaventa() \{\par
+\tab\tab\tab console.log(frase);\par
+\tab\tab\}\par
+\tab\}\par
+\}\b0\par
+\par
+Il \b creatoreMostri\b0  ha 3 parametri, e fa il return di un oggetto che ha 3 proprieta, \b nome\b0 , \b eta\b0  e \b spaventa()\b0 , ora pre creare un mostro per esempio un fantasma richiamiamo cosi :\par
+\par
+\b const fantasma = creatoreMostri('fanty', 553, 'BOO!');\par
+fantasma.spaventa(); // visualizza BOO!\par
+\par
+\b0 Ora abbiamo l'oggetto fantasma semplicemente richiamando creatoreMostri, in questo modo non dobbiamo creare un oggetto nuovo ogni volta ma basta richiamare la factory function.\par
+\par
+
+\pard\sl240\slmult1\qc\b Property Value Shorthand\par
+
+\pard\sl240\slmult1\b0\par
+Abbiamo visto come creare molti oggetti con una factory function, ma se avessimo centinaia di proprieta, riassegnare le stesse con lo stesso nome dentro alla factory function diventerebbe un po tedioso, per questo possiamo prendere una scorciatoia e dichiarare solo il nome della proprieta cosi :\line\par
+\b const creatoreMonstri= (nome, eta) => \{\par
+  return \{ \par
+    nome,\par
+    eta \par
+  \}\par
+\};\par
+\par
+\b0 Il risultato e lo stesso, solo che non ci ripetiamo e risparmiamo tempo.\par
+\par
+
+\pard\sl240\slmult1\qc\b Destructured Assignment\par
+\par
+
+\pard\sl240\slmult1\b0 Spesso abbiamo bisogno di estrarre key-value dagli oggetti e salvarli come variabili, prendiamo ad esempio il seguente oggetto :\par
+\par
+\b const vampiro = \{\par
+  nome: 'Dracula',\par
+  citta: 'Transylvania',\par
+  preferenze: \{\par
+    giorno: 'dentro casa',\par
+    notte: 'magiare'\par
+  \}\par
+\};\par
+\par
+\b0 Se vogliamo estrarre la proprieta \b citta\b0  come variabile potremmo scrivere :\par
+\par
+\b const citta = vampiro.citta;\par
+\b0\par
+Oppure possiamo usare a nostro vantaggio la tecnica chiamata \b destructured assignment\b0  per liberarci di un po di codice in piu.\par
+\par
+Nel \b destructured assignment\b0  creamo una variabile con il nome della proprieta dell'oggetto tra parentesi \{ \} e l'assegnamo a un oggetto es.\par
+\par
+\b const \{ citta \} = vampiro.\par
+console.log(citta); //visualizza Transylvania\par
+\par
+\b0 Possiamo anche riferirci a proprieta interne cosi :\par
+\par
+\b const \{giorno\} = vampiro.preferenze;\par
+\par
+
+\pard\sl240\slmult1\qc Built-in Object Methods\par
+\par
+
+\pard\sl240\slmult1\b0 Fino ad ora abbiamo creato istanze di oggetti coi i propri metodi, ma possiamo prendere vantaggio anche dai metodi gia presenti nell'oggetto.\par
+\par
+Come il metodo \b Object.keys(vampiro)\b0  che restituisce tutte le proprieta di un oggetto come array.\par
+\par
+Un altro metodo e \b Object.entries(vampiro) \b0 che restituisce un array che contiene altri array con sia le key che il valore.\par
+\par
+
+\pard\sl240\slmult1\qc\b Iterators\par
+\par
+
+\pard\sl240\slmult1\b0 Sappiamo che le funzioni possono accettare informazioni (variabili) come argomenti .\par
+Ora possiamo salire di un livello, le funzioni possono inoltre accettare altre funzioni come argomento. \par
+\par
+Quando comunichiamo con altre persone, condividiamo un vocabolario accumulato negli anni simile, percio se dico conta fino a 3, sappiamo gia che si parte da 1 e si finisce con 3, per i computer dobbiamo fare tutto noi e specificare che bisogna partire da 1 e finire a 3.\par
+\par
+Per creare un vocabolario comune e non dover riscrivere ogni volta il significato, nella programmazione creamo le functions, che ci permette di riutilizzare blocchi di codice, e per rendere piu chiari i programmi.\par
+\par
+Se trovi una funzione chiamata contaFinoATre() in un programma ti rendi subito conto a cosa serve senza dover stare li e andare a controllare il codice.\par
+\par
+\b Higher-order functions\b0  sono funzioni che accettano altre frunzioni come argomenti e che possono anche restituire funzioni.\par
+\par
+
+\pard\sl240\slmult1\qc\b Functions as Data\par
+
+\pard\sl240\slmult1\b0\par
+\par
+\par
+\par
+\b\par
+\par
+\par
+\par
+\b0\par
+\par
+\par
+\par
+\b\par
+\b0\par
+\b\par
+\par
+\par
+
+\pard\sl240\slmult1\qc\par
+
+\pard\sl240\slmult1\par
+\b0  \par
+
+\pard\sa200\sl276\slmult1\fs22\lang16\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 

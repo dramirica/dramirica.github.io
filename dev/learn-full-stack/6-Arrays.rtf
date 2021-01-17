@@ -1,0 +1,290 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs26\lang16 Arrays\par
+
+\pard\sa200\sl276\slmult1\b0 Gli array aiutano a ordinare e contenere dati in un solo posto, in modo da poter accedere direttamente alle informazioni, usare gli array e vitale in ogni programma o videogioco.\par
+Un modo nella vita reale per organizzare dati e tramite le liste es.\par
+
+\pard\sl276\slmult1 Cibi :\par
+1) Lasagna\par
+2) Pizza\par
+3) Sarmale\par
+\par
+Invece in JavaScript, usando gli array, scriviamo :\par
+\par
+\b let cibi = ['Lasagna', 'Pizza', 'Sarmale'];\b0\par
+\par
+Gli array sono un modo per scrivere liste in JavaScript e possono contenere qualsiasi tipo di dato come string, number, boolean, ecc.\par
+\par
+Come i componenti di una \lang1040 lista\lang16 , anche gli array sono numerati, infatti ogni componente di un array ha un numero identificativo che ne indica la posizione al suo interno.\par
+\par
+
+\pard\sl276\slmult1\qc\b Create an Array\par
+
+\pard\sl276\slmult1\par
+\b0 Un modo per creare un array e tramite l'utilizzo di 'array literal', esso permette di aggiungere i dati nell'array all'interno delle perentesi [...], non vi e alcuna restrizione per i dati che esso possa contenere.\par
+\par
+\b let cibo = ['Lasagna', 10, true];\par
+\par
+\b0 Ogni dato all'interno  dell\lang1040 'array viene chiamato elemento, qui abbiamo tre elementi di tre tipi diversi e tutto salvato in una variabile chiamata cibo.\par
+\par
+
+\pard\sl276\slmult1\qc\b Accessing Elements\par
+
+\pard\sl276\slmult1\b0\par
+La posizione (\b index\b0 ) di ogni elemento dentro all'array e numerata partendo da 0, conoscendo la posizione possiamo accedere ai dati presenti nell'array in modo simile a come ci riferiamo a un elemento di una lista.\par
+\par
+\b\lang16 let cibo = ['Lasagna', 10, true];\par
+console.log(cibo[1]); // visualizza 10\par
+\par
+\b0 Nell'esempio sappiamo che la posizione di \b 10\b0  e \b 1\b0 , richiamiamo quindi l'array passando tra le quadre il numero 1\lang1040 , esso restituira il valore 10 che verra infine visualizzato a schermo con console.log.\par
+\par
+ Un latro modo e restituire la lettera di una stringa, si puo fare come negli array : \par
+\par
+\b let ciao = 'ciao come stai';\par
+console.log(ciao[5]); // visualizza c\par
+\par
+\b0 Oltre a poter solo visualizzare i dati degli array, possiamo estrarli e salvarli dentro a altre variabili :\par
+\par
+\b let ciao = 'ciao come stai';\par
+let lettera = ciao[7]; // lettera = m\par
+\par
+
+\pard\sl276\slmult1\qc Update elements\par
+\par
+
+\pard\sl276\slmult1\b0 Oltre a poter accedere agli array, possiamo anche modificarne i contenuti : \par
+\par
+\b let ciao = ['ciao', 'come', 'stai'];\par
+ciao[2] = 'sto';\par
+\par
+\b0 Nell'esempio modifichiamo l'array ciao contenente 3 stringhe, la stringa modificata risiede alla posizione 2, sostituendo quindi 'stai' con 'sto'.\par
+\par
+\b let ciao = ['ciao', 'come', 'sto'];\par
+\par
+
+\pard\sl276\slmult1\qc Arrays with let and const\par
+\par
+
+\pard\sl276\slmult1\b0 Possiamo dichiarare array sia con \b let\b0  che con \b const\b0 , la differenza sta nel fatto che con let possiamo riassegnare alla variabile un intero nuovo array, invece usando const possiamo solo cambiare i dati all'interno dell'array ma senza assergnarne uno nuovo o cambiando il tipo di dati.\par
+\par
+
+\pard\sl276\slmult1\qc\b The .length property\par
+\par
+
+\pard\sl276\slmult1\b0 Una delle proprieta incorporate negli array e \b length\b0 , serve a restituire il numero degli elementi presenti in un array, possiamo accedere alla lunghezza dell'array esattamente come facciamo per le stringhe, es.\par
+\b console.log(ciao.length); //restituisce 3\par
+\b0\par
+
+\pard\sl276\slmult1\qc\b The .push() Method\par
+\par
+
+\pard\sl276\slmult1\b0 Un medoto che ci aiuta a gestire gli array e .push(), esso ci permette di aggiungere elementi, tutti gli elementi nuovi vengono aggiunti in coda all'array.\par
+\b let ciao = ['e1', 'e2'];\par
+ciao.push('e3', 'e4');\par
+console.log(ciao); //visualizza ['e1', 'e2', 'e3', 'e4'];\par
+\par
+\b0 In questo caso aggiungiamo 2 elementi all'array.\par
+\par
+
+\pard\sl276\slmult1\qc\b The .pop() Method\par
+\par
+
+\pard\sl276\slmult1\b0 Un altro metodo molto utile e \b .pop()\b0  che rimuove l'ultimo elemento dall'array.\par
+\b let ciao = ['e1', 'e2'];\par
+ciao.pop(); // l'array diventa ciao['e1'];\par
+\par
+
+\pard\sl276\slmult1\qc More Array Methods\par
+
+\pard\sl276\slmult1\b0\par
+Ci sono molti altri metodi oltre a pop e push, ma sono talmente tanti che sarebbe impossibile trattarli tutti uno per uno, per qualsiasi metodo di cui hai bisogno cerca su google e sulla documentazione MDN (mozilla developer network).\par
+\par
+Tutti i metodi ci rendono la vita piu semplice con gli array, percio usali sempre quando disponibili per migliorare la velocita della tua programmazione.\par
+\par
+Alcuni di questi metodi sono :\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 .shift() rimuove il primo elemento nell'array\par
+{\pntext\f1\'B7\tab}.unshift('ciao') aggiunge un elemento all'inizio dell'array\par
+{\pntext\f1\'B7\tab}.slice(start, end) seleziona una porzione dell'array, start rappresenta l'index di inizio e end rappresenta l'index di fine, l'index finale non e incluso nella porzione, se abbiamo un array di 5 elementi e vogliamo selezionare i primi 4 elementi facciamo array.slice(0, 4); selezionando cosi le posizioni : 0,1,2,3 e lasciando la posizione 4 fuori dalla selezione, questo metodo non modifica l'array ma seleziona solamente una sua porzione in modo che la si possa utilizzare\par
+{\pntext\f1\'B7\tab}.indexOf('ciao') trova nell'array il primo elemento corrispondente al valore tra le parentesi e ne restituisce l'index, se non trova nessun elemento corrispondente restituisce -1\par
+
+\pard\sl276\slmult1\par
+
+\pard\sl276\slmult1\qc\b Arrays and Functions\par
+\par
+
+\pard\sl276\slmult1\b0 Possiamo modificare gli array anche dentro alle funzioni, tutti i cambiamenti fatti dentro una funzione vengono mantenuti anche al di fuori di essa, l'array va passato come argomento della funzione per poter essere modificato.\par
+\par
+
+\pard\sl276\slmult1\qc\b Nested Arrays\par
+\par
+
+\pard\sl276\slmult1\b0 Possiamo inserire dentro agli array, altri array, creando cosi un \b nested array \b0 :\par
+\b let array = [ 0, [ 0, 1 ] ];\par
+console.log(array[1][1]); //visualizza 1\par
+console.log(array[1]); //visualizza [0, 1]\par
+\b0 Nell'esempio con la prima parentesi quadra accediamo alla posizione 1 che ha un array al suo interno, con la seconda invece accediamo alla posizione 1 dell'array dentro all'array che restituisce il valore 1.\par
+Se non specifichiamo il secondo index, dell'array interno, viene restituito direttamente tutto l'array interno.\par
+\par
+
+\pard\sl276\slmult1\qc\b JavaScript Loops\par
+\par
+
+\pard\sl276\slmult1\b0 Se hai bisogno che un'azione venga ripetuta una o due volte non e un impresa impossibile riscrivere il codice due volte, ma se la stessa azione va ripetuta 10-20 volte conviene scrivere un \b loop\b0 .\par
+I loop ci permettono di ripetere azioni ripetitive, tutte le volte che ne abbiamo bisogno, tenendo conto sia di quante volte vada ripetuta un azione sia cosa deve cambiare ogni volta che l'azione si ripete.\par
+\par
+Un loop ripete l'azione o un set di istruzioni, fino a che una determinata condizione non viene raggiunta, questa condizione viene chiamata \b stopping condition\b0 , l'azione di ripetere una set di istruzioni si chiama nel linguaggio di programmazione \b iterate\b0 . \par
+\par
+Quando dobbiamo riutilizzare un set di istruzioni, solitamente le integriamo dentro a una funzione, similarmente quando vogliamo che le istruzioni vengano ripetute svariate volte usiamo i loop, rendendo cosi il codice piu pulito e automatizzato nell'eseguire istruzioni.\par
+\par
+Come specificato, un loop esegue un azione finche una specifica condizione non viene raggiunta, una volta raggiunta il loop si ferma e il condice avanza oltre il loop.\par
+\par
+
+\pard\sl276\slmult1\qc\b The For Loop\par
+
+\pard\sl276\slmult1\b0\par
+Invece di scrivere lo stesso blocco di codice molteplici volte, i loop permettono di far fare questo lavoro ai computer scrivendo il codice una sola volta, un modo per dare al computer queste istruzioni e con il \b for \b0 loop.\par
+\par
+Il for loop ha bisogno di un \b iterator variable\b0 , questo serve come condizione da controllare per far continuare il codice o no, ogni il volta che il codice si ripete la condizione viene ricontrollata e modificata.\par
+\par
+\b for ( let x=0; x<5;  x++ ) \{\par
+\tab console.log(x); //visualizza 0 1 2 3 4 \par
+\} \par
+\b0\par
+Il for contiene tra le parentesi 3 espressioni diverse, separate da un punto e virgola : \par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1\b initialization \b0 fa partire il loop e setta la variabile al valore di partenza\b\par
+{\pntext\f1\'B7\tab}stopping condition \b0 la condizione che viene controllata ogni volta che il loop si ripete, se la condizione e \b true\b0  il loop continua, se e \b false\b0  si ferma\b\par
+{\pntext\f1\'B7\tab}iteration statement \b0 specifica come la variabile deve essere aggiornata ogni volta un esempio e aggiungere 1 alla variabile a ogni loop\b\par
+
+\pard\sl276\slmult1\par
+
+\pard\sl276\slmult1\qc Looping through Arrays\par
+\par
+
+\pard\sl276\slmult1\b0 I for loop sono molto utili quando vogliamo interagire con le strutture di dati come gli array, in modo da poter controllare ogni singolo elemento dell'array tramite il loop.\par
+ \par
+Gli array contengono liste di dati, come nomi e eta, immagina di avere un negozio e voler aumentare l'eta di tutti di uno con l'anno nuovo, grazie al for possiamo farlo facilmente.\par
+\par
+Per far si che il loop passi per ogni elemento dell'array, dobbiamo usare la propieta .length come condizione, cosi :\par
+\par
+\b const eta = [22, 55, 44, 33];\par
+for (let i=0; i < eta.length; i++)\{\par
+\tab console.log( eta[i] + 1 ); // visualizza 23 56 45 34\par
+\}\par
+\b0\par
+Nell'esempio usiamo la condizione \b i<eta.length\b0  che controlla che la variabile \b i\b0  sia minore della lunghezza totale dell'array, poi \b console.log( eta[i] + 1 ); \b0 visualizza l'eta con 1 in piu percio quando il loop passa per il primo dato dell'array legge 22 e visualizza 23.\par
+\par
+
+\pard\sl276\slmult1\qc\b Nested Loops\par
+\par
+
+\pard\sl276\slmult1\b0 Far partire un loop dentro a un altro loop viene chiamato \b nested loops\b0 , uno dei tanti utilizzi consiste nel comparare due array, per ogni volta che il loop esterno viene eseguito il loop interno si esegue completamente.\par
+\par
+\b const array1 = [6, 19, 20];\par
+const array2= [19, 81, 2];\par
+for (let i = 0; i < array1.length; i++) \{\par
+  for (let j = 0; j < array2.length; j++) \{\par
+    if (myArray[i] === yourArray[j]) \{\par
+      console.log('Uguali : ' + yourArray[j]);\par
+    \}\par
+  \}\par
+\}; \par
+\b0\par
+Nell'esempio ogni elemento dell'array1 viene comparato con l'array2, quindi al primo loop il 6 viene comparato con 19, 81 e 2, stessa cosa con il secondo loop con il numero 19, ogni volta che il valore dell'array1 con il valore dell'array2 concidono, viene visualizzato  \b Uguali : valore\b0 .\par
+\par
+
+\pard\sl276\slmult1\qc\b The While Loop\par
+\par
+
+\pard\sl276\slmult1\b0 Un altro tipo di loop e il \b while\b0 , mettiamo a confronto il for e il while : \par
+\b\par
+//Il for\b0\par
+\b for (let i = 1; i < 4; i++)\{\par
+  console.log(i);\par
+\}\par
+\par
+//Il while\b0\par
+\b let j = 1;\par
+while (j < 4) \{\par
+  console.log(j);\par
+  j++;\par
+\}\par
+\par
+\b0 Quesi due loop fanno praticamente la stessa cosa ma in 2 modi diversi. \par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 La variabile che usiamo come contatore invece di essere dichiarata tra le parentesi come nei for, la dichiariamo prima del while.\par
+{\pntext\f1\'B7\tab}La condizione va tra le parentesi come nel for\par
+{\pntext\f1\'B7\tab}L'incremento si fa alla fine con j++;\par
+{\pntext\f1\'B7\tab}Il while principalmente esegue il codice finche la condizione tra le parentesi risulta vera\par
+
+\pard\sl276\slmult1\par
+Se non incrementiamo j nel while, il codice verra eseguito all'infinito, la cosa peggiore che si possa fare a un computer.\par
+\par
+Il while e molto utile perche ci permette di incrementare il contatore anche dentro a if interni, non avviene in automatico ogni volta che si esegue il codice, per questo motivo il while e molto utile quando non sappiamo sin dall'inizio quante volte si dovra ripetere il codice.\par
+\par
+
+\pard\sl276\slmult1\qc\b Do ... While Statements\par
+\par
+
+\pard\sl276\slmult1\b0 In alcuni casi abbiamo bisogno che il blocco di codice venga eseguito almeno una volta prima che il loop parta, grazie al \b do ... while\b0  possiamo farlo, esso esegue il codice una volta e poi continua a rieseguire il blocco di codice fino a che la codizione diventa falsa, in questo modo :\par
+\par
+\b let countString = '';\par
+let i = 0;\par
+ \par
+do \{\par
+  countString = countString + i;\par
+  i++;\par
+\} while (i < 5);\par
+ \par
+console.log(countString); //visualizza 01234\b0\par
+ \b\par
+\b0 In questo caso il do viene eseguito per la prima volta e la stringa countString riceve il valore 0, poi viene rieseguito il codice fino a che i<5 non diventa falso percio quando i=5 il do-while smette di essere eseguito, come risultato finale countString assume il valore '01234'.\par
+\par
+
+\pard\sl276\slmult1\qc\b The break Keyword\par
+\par
+
+\pard\sl276\slmult1\b0 Possiamo fare in modo che un loop si interrompa anche se la condizione non viene raggiunta, \b break\b0  permette di uscire dal loop : \par
+\par
+\b for (lei i=0; i<100; i++)\{\par
+\tab if(i>2)\{\par
+\tab\tab break;\par
+\tab\}\par
+console.log('banana');\par
+\}\par
+\par
+console.log('arancia');\par
+//visualizza banana banana banana arancia\par
+\par
+\b0 Nell'esempio iniziamo un loop che dovrebbe in teoria ripetersi 100 volte, ma dentro abbiamo un if che controlla quando i diventa > 2, per i primi 3 loop viene visualizzato banana, quando la condizione viene raggiunta viene eseguito il break, questo fa uscire dal loop e visualizza arancia.\b\par
+
+\pard\sl276\slmult1\qc\par
+
+\pard\sl276\slmult1\b0\par
+\par
+\par
+ \fs24\par
+\par
+\fs26\par
+\par
+\par
+\par
+\b\par
+\par
+\par
+\par
+\b0\par
+\par
+\lang16\par
+\b\par
+\b0\par
+\par
+\par
+
+\pard\sa200\sl276\slmult1\par
+\fs22\par
+}
+ 
