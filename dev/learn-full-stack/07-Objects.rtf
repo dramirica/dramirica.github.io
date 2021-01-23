@@ -334,6 +334,29 @@ Se trovi una funzione chiamata contaFinoATre() in un programma ti rendi subito c
 \pard\sl240\slmult1\qc\b Functions as Data\par
 
 \pard\sl240\slmult1\b0\par
+Le funzioni funzionano come ogni altro tipo di dato in JS, oltre a poterle assegnare alle variabili, possiamo assegnare le variabili a altre variabili  nuove.\par
+\par
+Possiamo :\par
+\par
+\b const diATuttiCheStoFacendoUnaCosaImportante = () => \{\par
+\b0\tab\b console.log("Sto facendo una cosa importante!");\par
+\}\par
+\par
+\b0 //vogliamo rinominare questa funzione per non dover richiamare sempre una funzione cosi lunga\par
+\par
+\b const occupato = diATuttiCheStoFacendoUnaCosaImportante;\par
+occupato(); // Visualizza Sto facendo una cosa importante!\b0\par
+\par
+In questo modo stiamo assegnando alla variabile \b occupato\b0  la funzione \b diATuttiCheStoFacendoUnaCosaImportante\b0 , assegnamo la funzione a occupato senza parentesi perche vogliamo assegnare la funzione e non il suo risultato.\par
+\par
+Le funzioni sono speciali perche possiamo avere tutta l'utilita di una funzione ma mantenendo le caratteristiche di tutti gli altri tipi di dati.\par
+\par
+
+\pard\sl240\slmult1\qc\par
+\b Functions as Parameters\par
+\par
+
+\pard\sl240\slmult1\b0\par
 \par
 \par
 \par
